@@ -1,0 +1,142 @@
+*{ margin: 0; padding: 0;}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.top{
+    background-color: navy;
+    color: white;
+    height: 150px;
+}
+
+#title {
+    padding: 20px 20px 0px 20px;
+    line-height: 40px;
+}
+
+nav ul li{
+    list-style: none;
+}
+#navi li a:link{
+    color: white;
+    text-decoration-line: none;
+}
+#navi li a:visited{
+    color: white;
+}
+#navi {
+    height: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#navi > li{
+    float: left;
+    width: 300px;
+    position: relative;
+}
+
+#navi li ul {
+    width: 300px;
+    display: none;
+    position: absolute;
+    color: white;
+    background: navy;
+}
+
+#navi li:hover ul {
+    display: block;
+}
+
+#navi li:hover{
+    background: white;
+}
+#navi li:hover > a{
+    color: navy;
+}
+
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.loginpage{
+    background-color: navy;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    width: 12%;
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainpage {
+    margin: 5px;
+    width: 73%;
+    display: flex;
+}
+
+#post article{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+}
+
+#post article h3{
+    font-size: 25px;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: bold;
+    text-align: justify;
+}
+#content p{
+    padding: 6px;
+}
+
+#adv {
+    display: flex;
+    flex-direction: column wrap;
+    width: 15%;
+}
+#ad article{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    background-color: ivory;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.under {
+    clear: both;
+    background-color: navy;
+}
+
+#foot ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 50px;
+}
+
+#foot ul li a:link{
+    color: white;
+    text-decoration-line: none;
+}
