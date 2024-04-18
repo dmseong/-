@@ -1,0 +1,51 @@
+*{  margin: 0;
+    padding: 0;
+}
+body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li{
+    list-style: none;
+    text-align: center;
+}
+
+#navi li ul{
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+#navi li a:link{
+    color: white;
+    text-decoration-line: none;
+}
+
+#navi li a:visited{
+    color:white;
+}
+#navi li:hover{
+    background-color: white;
+}
+#navi li:hover a{
+    color:black
+}
+
+#navi li:hover ul {
+    display: block;
+    background-color: black;
+}
+
+#post article header{
+    margin: 5px;
+}
+
+#foot ul li a:link{
+    color: rgb(67, 67, 67);
+    text-decoration-line: none;
+}
+
+#foot ul li a:visited{
+    color: rgb(67, 67, 67);
+}
