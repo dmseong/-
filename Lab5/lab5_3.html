@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5-3</title>
+</head>
+<body>
+    <h2 id="demo"></h2>
+    <h2 id="ages"></h2>
+    <h2 id="heights"></h2>
+    <h2 id="weights"></h2>
+    <h2 id="BMI"></h2>
+    <script>
+        let name = prompt("이름을 입력하세요.");
+        let age = prompt("나이를 입력하세요(숫자)");
+        let height = prompt("키를 입력하세요(숫자)");
+        let weight = prompt("체중을 입력하세요(숫자)");
+
+        let bmis = bmif(age, height, weight);
+
+        document.getElementById("demo").innerHTML="이름: "+name;
+        document.getElementById("ages").innerHTML="나이: "+age;
+        document.getElementById("heights").innerHTML="키: "+height;
+        document.getElementById("weights").innerHTML="체중: "+weight;
+        document.getElementById("BMI").innerHTML="당신은 "+bmis+"("+bmi+")입니다.";
+
+        function bmif(ages, h, w){
+            bmi = w / ((h / 100) ** 2);
+            if (ages > 19 && ages < 30){
+                if (bmi <= 17.9) {
+                    var bmis = "저체중"; }
+                else if (bmi <= 23) {
+                    var bmis = "표준체중"; }
+                else if (bmi <= 30) {
+                    var bmis = "과체중"; }
+                else {var bmis = "비만";}
+                }
+            else if (ages > 29 && ages < 40){
+                if (bmi <= 18.4){
+                    var bmis = "저체중";}
+                else if (bmi <= 24){
+                    var bmis = "표준체중";}
+                else if (bmi <= 30){
+                    var bmis = "과체중";}
+                else {var bmis = "비만";}
+            }
+            return bmis;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5-4</title>
+</head>
+<body>
+    <div style="font-weight: bold; color: blue;" id="demo"></div>
+    <script>
+        let num = prompt("카운트다운할 숫자를 입력하세요.");
+
+        const x = setInterval(myFunction, 1000);
+        function myFunction(){
+            if (num <= 0){
+                clearInterval(x);
+                document.getElementById("demo").innerHTML="타이머 종료";
+                return;
+            }
+            document.getElementById("demo").innerHTML=num;
+            --num;
+        }
+    </script>
+</body>
+</html>

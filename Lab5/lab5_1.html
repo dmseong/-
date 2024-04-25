@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab5-1</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        function grade(sc){
+            if (sc >= 90)
+                document.getElementById("demo").innerHTML = "입력한 점수 "+sc+"는 A학점입니다.";
+            else if (sc >= 80)
+                document.getElementById("demo").innerHTML = "입력한 점수 "+sc+"는 B학점입니다.";
+            else if (sc >= 70)
+                document.getElementById("demo").innerHTML = "입력한 점수 "+sc+"는 C학점입니다.";
+            else if (sc >= 60)
+                document.getElementById("demo").innerHTML = "입력한 점수 "+sc+"는 D학점입니다.";
+             else
+                document.getElementById("demo").innerHTML = "입력한 점수 "+sc+"는 F학점입니다.";
+        }
+        let score = prompt("점수를 입력하세요");
+        grade(score);
+    </script>
+</body>
+</html>
