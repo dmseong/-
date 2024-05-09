@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로또 번호 생성 결과</h1>
+    <button id="btn" onclick="createfunc(this)">로또 번호 생성하기</button>
+    <h3 id="result"></h3>
+    <button id="close" onclick="javascript:window.close();">닫기</button>
+
+    <script>
+        let arr=[];
+        function createfunc() {
+            document.getElementById("result").innerHTML = " ";
+            let str = "";
+
+            while (arr.length != 6){
+                let num = Math.floor((Math.random() * 45)+1);
+                let dupl = false;
+                for (i=0; i<arr.length; i++){
+                    if (arr[i] == num){
+                        dupl = true;
+                        console.log(dupl);
+                    }
+                }
+                if (dupl == false){
+                    arr.push(num);
+                }
+                else{
+                    continue;
+                }
+            }
+
+            for (i=0; i<6; i++){
+                if (i==5){
+                    str += arr.pop();
+                    break;
+                }
+                str += arr.pop() + ",";
+            }
+            document.getElementById("result").innerHTML = "결과: "+str;
+        }
+    </script>
+</body>
+</html>
